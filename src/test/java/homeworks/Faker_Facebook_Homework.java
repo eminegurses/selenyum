@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
@@ -67,29 +67,13 @@ public class Faker_Facebook_Homework extends TestBase {
         Assertions.assertFalse(male.isSelected());
         Assertions.assertFalse(custom.isSelected());
 
-        waitForSecond(2);
+        waitForSecond(4);
 
-        //13. Sayfayi kapatin
+//        13. Sayfayi kapatin
         driver.quit();
     }
 
-        @Test
-        public void test01() {
 
-            //https://www.globalsqa.com/samplepagetest/ sitesine gidin
-            driver.get("https://www.globalsqa.com/samplepagetest/");
-
-            //Textbox lari fake datalar ile doldurun
-
-            Faker faker = new Faker();
-            WebElement nameTextBox = driver.findElement(By.id("g2599-name"));
-            nameTextBox.sendKeys(
-                    faker.name().firstName(), Keys.TAB,
-                    faker.internet().emailAddress(),Keys.TAB,
-                    faker.internet().domainName());
-
-
-        }
 
 
 
